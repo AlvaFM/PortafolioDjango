@@ -1,2 +1,3 @@
-# PortafolioDjango
-Portafolio hecho con la herramienta Django 
+# Usuario y contraseña:
+User: admin
+contraseña: alva1234
