@@ -1,0 +1,43 @@
+{% load bootstrap5 %}
+<!-- Carga las etiquetas de la biblioteca de Django para Bootstrap 5 -->
+
+{% load static %}
+<!-- Carga las etiquetas de la biblioteca de Django para archivos estáticos -->
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Define el tipo de documento como HTML5 y establece el idioma a inglés -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres como UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la ventana gráfica para que el diseño sea responsive -->
+
+    <title>{% block title %}Mi Portafolio{% endblock %}</title>
+    <!-- Define el título del documento, que puede ser sobreescrito en otras plantillas extendidas -->
+
+    {% bootstrap_css %}
+    <!-- Inserta las hojas de estilo CSS de Bootstrap 5 -->
+
+    <link rel="stylesheet" href="{% static 'css/generic.css' %}">
+    <!-- Incluye una hoja de estilo CSS personalizada desde los archivos estáticos -->
+
+    {% block extra_head %}
+    <!-- Bloque extra para añadir contenido adicional en la cabecera en otras plantillas extendidas -->
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <!-- Comienza un bloque de contenido que será definido en las plantillas que extiendan esta plantilla -->
+    {% endblock %}
+
+    {% bootstrap_javascript %}
+    <!-- Inserta los scripts JavaScript de Bootstrap 5 -->
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <!-- Incluye un script JavaScript personalizado desde los archivos estáticos -->
+</body>
+</html>

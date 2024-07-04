@@ -1,0 +1,280 @@
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: Calibri, sans-serif;
+    background: linear-gradient(to right, #6e6f88,#6e6f88 );
+}
+
+
+li{
+    color: rgb(0, 105, 93);
+}
+
+.texto-centro {
+    text-align: center;
+}
+.texto-derecha{
+    text-align: right;
+}
+
+.navbar a {
+    color: #000000;
+    padding: 10px;
+}
+
+.navbar {
+    background: linear-gradient(to right, #ffffff, #ffffff, #494a6b);
+    box-shadow: 0px 10px 20px rgba(0, 56, 54, 0.882);
+    z-index: 1000; 
+    
+    
+}
+.navbar a:hover {
+    background:  linear-gradient(to right, #8e7e8b, #010138);
+    color: #ffffff;
+    border-radius: 100px;
+    
+}
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: #fff;
+    font-weight: bold;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+
+section {
+    padding: 0px;
+    margin: 0px;
+    background: linear-gradient(to right, #6e6f88,#fff,#fff,#6e6f88 );
+    color: black;
+    animation: fadeIn 1s ease-in-out; 
+    border: none;
+}
+
+
+/* Estilos de la sección Sobre Mi */
+.fperil {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+}
+
+#sobre-mi {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 100px;
+}
+#sobre-mi a{
+    color: #008B8B;
+    text-decoration: none;
+}
+#sobre-mi a:hover{
+    color: #710062;
+}
+
+#sobre-mi .col-md-3, #sobre-mi .col-md-9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sobre-mi p {
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Estilos de la seccion Mis Skills */
+.iconskills{
+    width: 50%;
+    max-width: 50px;
+}
+#skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    width: 100%;
+}
+
+#skills ul li {
+    background: linear-gradient(to right, #004749, #002c6a,#002f31);
+    color: #bebebe; 
+    margin: 5px 0;
+    padding: 15px;
+    border-radius: 40px;
+    transition: background-color 0.3s ease; 
+}
+
+#skills ul li:hover {
+    color: rgb(153, 173, 1);
+    box-shadow: 10px 2px 4px rgba(2, 71, 181, 0.882);
+}
+
+/* Estilos de la seccion Mis Proyectos */
+
+#proyectos{
+    padding: 100px;
+}
+#proyectos a{
+    color: rgb(0, 146, 131);
+    text-decoration: none;
+}
+#repositories a{
+    color: rgb(255, 255, 255);
+    background-color: #0d6097;
+}
+
+.carta-proyecto {
+    margin: 10px; 
+    flex: 1 1 30%;
+    max-width: 30%;
+}
+
+#proyectos .proyecto:hover {
+    
+    background-image: linear-gradient(to right, #710062, #010138);
+    border-radius: 1000px;
+}
+
+#proyectos .proyecto:last-child {
+    border-bottom: none;
+}
+
+/* Estilos del formulario de contacto en la sección Contactame */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+}
+
+#contacto label {
+    margin: 10px;
+}
+
+#contacto input,
+#contacto textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+#contacto input[type="submit"] {
+    background-color: #00FFFF;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#contacto input[type="submit"]:hover {
+    background-color: #5a005a;
+    color: white; 
+}
+
+/*pie de pagina */
+footer {
+    padding: 10px;
+    color: black;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+ 
+    #sobre-mi {
+        flex-direction: column;
+    }
+
+    #sobre-mi .col-md-3, #sobre-mi .col-md-9 {
+        flex-direction: column;
+        width: 100%;
+        max-width: none;
+    }
+
+    #skills ul {
+        width: 100%;
+    }
+
+    #proyectos .carta-proyecto {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+    #certificados {
+        max-width: 100%;
+        flex: 1 1 100%;
+        flex-direction: column;
+    }
+    
+}
+.certificadoimg{
+
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin: auto;
+}
+#certificados{
+    padding: 100px;
+}
+#certificados a{
+    color: white;
+    background-image: linear-gradient(to right, #710062, #010138);
+    border-radius: 100px;
+    text-decoration: none;
+
+}
+#certificados a:hover{
+    color: rgb(218, 218, 0);
+}
+#certificados img:hover{
+    box-shadow: 5px -10px 4px rgba(2, 71, 181, 0.882); 
+}

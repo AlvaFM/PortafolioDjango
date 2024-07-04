@@ -1,0 +1,208 @@
+/* Estilos generales */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri, sans-serif;
+    background: linear-gradient(to right, #6e6f88,#f2f2f2,#ffffff,#6e6f88 );
+    color: #000000;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00FFFF;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para la sección de encabezado */
+
+.header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    padding: 50px 0;
+}
+
+/* Estilos para botones */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #00FFFF;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5a005a;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Estilos para el pie de página */
+
+.footer {
+    background-color: #f2f2f2;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+tr{
+    color: rgb(0, 0, 0);
+}
+tr:hover{
+    
+    background: linear-gradient(to right, #000000, #010138,#000000);
+    color: white;
+    border-radius: 100px;
+}
+th{
+    color: #ffffff;
+}
+
+#formulario {
+    background: linear-gradient( #6e6f88,#8083ae,#6e6f88 );
+    font-size: 25px;
+}
+#enviarboton{
+    width: 100%;
+    font-size: 25px; 
+    padding: 15px; 
+    text-align: center;
+}
+#editarcont{
+    background: linear-gradient( #6e6f88,#878ab8,#6e6f88 );
+}
+/* Estilos específicos para el proyecto */
+
+#proyecto-contenedor {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+#proyecto-titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(to right, #6e6f88,#878ab8,#6e6f88 );
+    text-align: center;
+}
+
+#proyecto-imagen {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+#proyecto-contenido {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-bottom: 20px;
+    background: #00FFFF;
+    border-radius: 5px;
+}
+
+#proyecto-descripcion {
+    font-size: 1.1rem;
+    color: #ffffff;
+    background: #878ab8;
+    border-radius: 5px;
+}
+
+
+#proyecto-tecnologias {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+#proyecto-contenidocontainer{
+    background-color: #e8e8e8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Estilos específicos para la vista de detalle del contacto */
+
+#contacto-contenedor {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+#contacto-titulo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    background-color: #00FFFF;
+}
+
+
+#contacto-nombre, #contacto-email, #contacto-mensaje {
+    background-color: #d6d6d6;
+    font-size: 1.1rem;
+    color: #000000;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Estilos específicos para la vista login*/
+
+
+#login-form {
+    background-color: #ffffff; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#login-heading {
+    color: #ffffff; 
+    border-radius: 5px;
+    font-size: 2rem; 
+    background-color: #878ab8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

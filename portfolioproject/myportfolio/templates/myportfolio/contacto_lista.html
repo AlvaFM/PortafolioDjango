@@ -1,0 +1,65 @@
+{% extends 'base_generic.html' %}
+<!-- Extiende de la plantilla base_generic.html, heredando su estructura y estilo básico -->
+
+{% block content %}
+<!-- Comienza un bloque de contenido denominado 'content' -->
+
+  <div class="container mt-5">
+    <!-- Contenedor de Bootstrap con margen superior (mt-5) para espaciado -->
+    <h2 class="text-center mb-4">Registro de contactos</h2>
+    <!-- Encabezado de nivel 2 centrado con margen inferior (mb-4) -->
+
+    <div class="table-responsive">
+      <!-- Contenedor de Bootstrap que hace la tabla responsive -->
+      <table class="table  align-middle">
+        <!-- Tabla con clases de Bootstrap para hacerla 'hover' y con alineación vertical media -->
+        <thead class="table-dark">
+          <!-- Encabezado de la tabla con fondo oscuro -->
+          <tr>
+            <th scope="col">Nombre</th>
+            <!-- Columna para los nombres -->
+            <th scope="col">Email</th>
+            <!-- Columna para los emails -->
+            <th scope="col">Mensaje</th>
+            <!-- Columna para los mensajes -->
+            <th scope="col" class="text-center">Acciones</th>
+            <!-- Columna centrada para las acciones -->
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Cuerpo de la tabla -->
+          {% for contacto in contactos %}
+          <!-- Bucle que recorre todos los contactos -->
+            <tr>
+              <td>{{ contacto.nombre }}</td>
+              <!-- Celda que muestra el nombre del contacto -->
+              <td>{{ contacto.email }}</td>
+              <!-- Celda que muestra el email del contacto -->
+              <td>{{ contacto.mensaje }}</td>
+              <!-- Celda que muestra el mensaje del contacto -->
+              <td class="text-center">
+                <!-- Celda centrada para las acciones -->
+                <a href="{% url 'contacto_detalle' contacto.pk %}" class="btn btn-info btn-sm m-1">Ver</a>
+                <!-- Enlace a la vista de detalle del contacto, estilizado como botón pequeño informativo -->
+                <a href="{% url 'contacto_editar' contacto.pk %}" class="btn btn-warning btn-sm m-1">Editar</a>
+                <!-- Enlace a la vista de edición del contacto, estilizado como botón pequeño de advertencia -->
+                <form method="POST" action="{% url 'contacto_eliminar' contacto.pk %}" style="display:inline;">
+                  <!-- Formulario para eliminar el contacto, utilizando el método POST -->
+                  <!-- El atributo 'style="display:inline;"' mantiene el formulario en línea con otros elementos -->
+                  {% csrf_token %}
+                  <!-- Token CSRF para proteger contra ataques de falsificación de solicitudes entre sitios -->
+                  <button type="submit" class="btn btn-danger btn-sm m-1">Eliminar</button>
+                  <!-- Botón de envío estilizado como botón pequeño de peligro (rojo) -->
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+          <!-- Fin del bucle que recorre los contactos -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock %}
+<!-- Finaliza el bloque de contenido 'content' -->
+

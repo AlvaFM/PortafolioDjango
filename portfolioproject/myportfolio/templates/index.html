@@ -1,0 +1,190 @@
+{% load bootstrap5 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<div  class="container-fluid p-3">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre-mi"><b><h5>Sobre mi</h5></b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills"><b><h5>Mis Skills</h5></b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#proyectos"><b><h5>Mis proyectos</h5></b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#certificados"><b><h5>Mis Certificados</h5></b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link margin-start" href="{% url 'contacto_nuevo' %}"><b><h5>Contactame</h5></b></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="">
+        <!-- Sección Sobre Mí -->
+        <div class="row">
+            <!-- Sección Sobre Mí -->
+            <div class="col-md-12 mb-4 p-3">
+                <section id="sobre-mi" class="row">
+                    <h1 class="col-12">Alvaro Flores/AlvaFM</h1>
+                    <div class="col-md-3">
+                        <img class="fperil" src="{% static 'img/perfil.jpg' %}" alt="perfil">
+
+                    </div>
+                    <div class="col-md-9">
+                        <p>
+                            <h5>Me presento, soy estudiante de Ingeniería Informática en Duoc UC. Tengo 24 años y nací el 5 de mayo del 2000. Entre mis pasatiempos se encuentran el arte, especialmente el dibujo, y la caminata. Desde pequeño, el mundo de la computación me ha fascinado. Mi curiosidad sobre cómo funcionan las páginas web y lo que puedo crear con ellas fue lo que me motivó a elegir esta carrera.
+
+                                Como amante del arte, considero que la informática es una forma de arte más: el arte de programar. Aunque no he tenido trabajos formales como programador, eso no disminuye mis ansias de surgir en el futuro como un ingeniero informático.
+                                
+                                Si deseas conocer más sobre mi experiencia y trayectoria, te invito a visitar mi perfil de LinkedIn a través del siguiente enlace. </h5>
+                        </p>
+                        <a href="https://cl.linkedin.com/"><img src="./assets/img/icon-linkedin.png" alt="">Linkedin</a>
+                        <p><h5>Mis planes a futuro incluyen ser útil para una empresa y poder aprender y ejercer como profesional independiente en informática. Aspiro a crear una aplicación o página web que sea de gran utilidad para las personas, generando beneficios tanto para mí como para la empresa en la que trabaje.</h5></p>
+                        
+                        
+                    </div>
+                    <div class="icono-redes">
+                        <ul class="lista-inline">
+                         <li><li><li></li></li></li>
+                          <li><b><h5>Correo: alv.floresm@duocuc.cl</h5></b></li>
+                          <li><b><h5>Instagram : <a href="https://www.instagram.com/">Alva_Sado</a></h5></b></li>
+                          <li><b><h5>Github : <a href="https://github.com/AlvaFM">AlvaFM</a></h5></b></li>
+                            
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <!-- Sección Mis Skills -->
+        <div class="col-md-12 p-3">
+            <section id="skills">
+                <h2>Mis Skills</h2>
+                <p><b><h5>Echa un vistazo a los lenguajes de programación con los que estoy familiarizado.</h5></b></p>
+                <ul>
+                    <li id="botonUp1">
+                        <p><b><h5>Durante mi primer semestre, cursé y terminé el aprendizaje de Python.</h5></b></p>
+                        <img class="iconskills" src="{% static 'img/icon-python.png' %}" alt="">
+                        <p id="parrafo1">
+                            <b>Python es un lenguaje de programación interpretado, de alto nivel y fácil de aprender. Es conocido por su sintaxis clara y legible, lo que lo hace ideal para principiantes y profesionales por igual. Python es versátil y se utiliza en una amplia gama de aplicaciones, desde desarrollo web y científico hasta inteligencia artificial y análisis de datos. Su comunidad activa y sus numerosas bibliotecas hacen que sea una opción popular para diversos proyectos de software.</b>
+                        </p>
+                    </li>
+                    <li id="botonUp2">
+                        <p><b><h5>Durante mi segundo semestre, cursé y terminé el aprendizaje del lenguaje de programación Java.</h5></b></p>
+                        <img class="iconskills" src="{% static 'img/icon-java.png' %}" alt="">
+                        <p id="parrafo2">
+                            <b>Java es un lenguaje de programación orientado a objetos, portable y de propósito general. Destaca por su seguridad, portabilidad y amplio uso en una variedad de aplicaciones, desde desarrollo web hasta aplicaciones móviles y sistemas embebidos. Su lema "Write Once, Run Anywhere" resalta su capacidad para ejecutarse en diferentes plataformas con una sola implementación del código.</b>
+                        </p>
+                    </li>
+                    <li id="botonUp3">
+                        <p><b><h5>Actualmente me encuentro cursando un curso de HTML/CSS.</h5></b></p>
+                        <img class="iconskills" src="{% static 'img/icon-html.png' %}" alt="">
+                        <img class="iconskills" src="{% static 'img/icon-css.png' %}" alt="">
+                        <p id="parrafo3">
+                            <b>HTML (HyperText Markup Language) es el lenguaje estándar utilizado para crear y diseñar páginas web. Define la estructura y el contenido de una página web mediante etiquetas, que luego son interpretadas por los navegadores web para mostrar el contenido al usuario.
+                
+                            CSS (Cascading Style Sheets) es un lenguaje utilizado para controlar el aspecto y el diseño de las páginas web escritas en HTML. Permite aplicar estilos como colores, fuentes, márgenes, y más, para mejorar la apariencia y la presentación de un sitio web. CSS funciona de manera complementaria con HTML para crear páginas web visualmente atractivas y funcionales.</b>
+                        </p>
+                    </li>
+                    <li id="botonUp4">
+                        <p><b><h5>Actualmente me encuentro realizando mi curso de JavaScript.</h5></b></p>
+                        <img class="iconskills" src="{% static 'img/icon-js.png' %}" alt="">
+                        <p id="parrafo4">
+                            <b>JavaScript (JS) es un lenguaje de programación de alto nivel, interpretado y orientado a objetos. Es conocido como el lenguaje de la web, ya que se utiliza principalmente para agregar interactividad y dinamismo a las páginas web. JavaScript se ejecuta en el navegador del cliente y permite manipular el contenido HTML, responder a eventos del usuario, realizar peticiones al servidor y mucho más. Es fundamental en el desarrollo web moderno, y su versatilidad lo hace útil tanto en el frontend como en el backend, gracias a entornos como Node.js.</b>
+                        </p>
+                    </li>
+                </ul>
+                              
+            </section>
+        </div>
+        <!-- Sección Mis Proyectos -->
+        <div class="col-md-12 p-3">
+            <section id="proyectos" class="row">
+                <h2 class="texto-centro">Algunos de mis proyectos</h2>
+                <div class="d-flex justify-content-center col-md-12">
+                    <div class="container">    
+            <div class="row">
+                {% for proyecto in proyectos %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ proyecto.imagen.url }}" class="card-img-top" alt="{{ proyecto.titulo }}">
+                        <div class="card-body" id="repositories">
+                            <h5 class="card-title">{{ proyecto.titulo }}</h5>
+                            <p class="card-text">{{ proyecto.descripcion }}</p>
+                            <a href="{{ proyecto.link_sitio }}" class="btn " target="_blank">Web</a>
+                            <a href="{{ proyecto.link_repositorio }}" class="btn " target="_blank">Repositorio</a>
+                            <a href="{% url 'proyecto_detalle' proyecto.pk %}" class="btn btn-info">Ver Detalle</a> <!-- Nuevo botón -->
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+ 
+   
+                </div class="textodiferente" >
+                <h2 class="texto-centro">Aquí puedes revisar los repositorios subidos a mi GitHub en tiempo real.</h2>
+                <div id="proyectos" class="p-3 col-md-12">
+                    
+                    <h2></h2>
+                </div>
+            </section>
+        </div>
+        <!-- Sección certificados -->
+        
+        <div class="col-md-12 p-3 container-fluid">
+            
+            <section id="certificados" class="row justify-content-center">
+                <h2 class="texto-centro">Certificados.</h2>
+                <p  ><b><h5 class="texto-centro">Aquí te dejo algunos de mis certificados (futuros certificados) para que los puedas ver o descargar y revisar mi historial de logros.</h5></b></p>
+                <div class="col-md-4 d-flex flex-column align-items-center">
+                    
+                    <a href="{% static 'img/certificadofalse.png' %}" download>
+                        <img class="certificadoimg" src="{% static 'img/certificadofalse.png' %}" alt="">
+                        <p class="texto-centro">Descargar</p>
+                    </a>
+                </div>
+                <div class="col-md-4 d-flex flex-column align-items-center">
+                    <a href="{% static 'img/certificadofalse.png' %}" download>
+                        <img class="certificadoimg" src="{% static 'img/certificadofalse.png' %}" alt="">
+                        <p class="texto-centro">Descargar</p>
+                    </a>
+                </div>
+                <div class="col-md-4 d-flex flex-column align-items-center">
+                    <a href="{% static 'img/certificadofalse.png' %}" download>
+                        <img class="certificadoimg" src="{% static 'img/certificadofalse.png' %}" alt="">
+                        <p class="texto-centro">Descargar</p>
+                    </a>
+                </div>
+            </section>
+        </div>
+    
+</div>
+
+<footer>
+    <p>&copy; 2024 AlvaFM. Todos los derechos reservados.</p>
+</footer> 
+<script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'js/actions.js' %}"></script>
+{% bootstrap_javascript %}
+</body>
+</html>

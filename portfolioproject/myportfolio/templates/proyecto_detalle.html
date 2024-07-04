@@ -1,0 +1,17 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<div class="container mt-5" id="proyecto-contenedor">
+    <h2 id="proyecto-titulo">{{ proyecto.titulo }}</h2>
+    <img src="{{ proyecto.imagen.url }}" alt="{{ proyecto.titulo }}" class="img-fluid" id="proyecto-imagen">
+    <p ><h3 id="proyecto-descripcion"><b>Descripción :</b></h3><p> {{ proyecto.descripcion }}</p></p>
+    <div id="proyecto-contenidocontainer">
+      <strong id="proyecto-contenido" >Contenido detallado:</strong>
+        
+        <div>{{ proyecto.contenido|safe }}</div>  
+    <p id="proyecto-tecnologias"><strong>Tecnologías:</strong> {{ proyecto.tecnologias.all|join:", " }}</p>
+  </div>
+    <a href="{{ proyecto.link_sitio }}" class="btn" id="proyecto-sitio-web">Sitio Web</a>
+    <a href="{{ proyecto.link_repositorio }}" class="btn" id="proyecto-repositorio">Repositorio</a>
+</div>
+{% endblock %}

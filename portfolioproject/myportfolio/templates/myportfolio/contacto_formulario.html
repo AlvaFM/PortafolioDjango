@@ -1,0 +1,22 @@
+{% extends 'base_generic.html' %}
+<!-- Extiende de la plantilla base_generic.html, heredando su estructura y estilo básico -->
+{% block content %}
+<!-- Comienza un bloque de contenido denominado 'content' -->
+  <div id="formulario" class="container mt-5">
+    <!-- Contenedor de Bootstrap con margen superior (mt-5) para espaciado -->
+    <h2>Por favor, rellena el formulario</h2>
+
+    <form method="POST" class="needs-validation" novalidate>
+      <!-- Formulario HTML con método POST para enviar datos al servidor -->
+      <!-- Atributo 'novalidate' para desactivar la validación nativa del navegador -->
+      {% csrf_token %}
+      <!-- Token CSRF para proteger contra ataques de falsificación de solicitudes entre sitios -->
+      {{ form.as_p }}
+      <!-- Renderiza el formulario Django con cada campo envuelto en un párrafo <p> -->
+      <button id="enviarboton" type="submit" class="btn btn-primary">Enviar</button>
+      <!-- Botón de envío con clases de Bootstrap para estilizarlo como un botón primario -->
+    </form>
+  </div>
+{% endblock %}
+<!-- Finaliza el bloque de contenido 'content' -->
+

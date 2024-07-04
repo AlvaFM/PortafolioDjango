@@ -1,0 +1,13 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container d-flex flex-column justify-content-center align-items-center min-vh-100">
+    <div class="text-center mb-4">
+        <img id="elfo" src="{% static 'img/elfo.png' %}" alt="Imagen de agradecimiento" class="img-fluid mb-3">
+    </div>
+    
+    <h2>¡Gracias por tu mensaje!</h2>
+    <p>Me pondré en contacto contigo lo más pronto posible.</p>
+</div>
+{% endblock %}

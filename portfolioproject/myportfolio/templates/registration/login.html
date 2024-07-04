@@ -1,0 +1,14 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div id="login-form" class="w-100" style="max-width: 400px;">
+        <h2 id="login-heading" class="text-center mb-4">Iniciar Sesión</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" id="login-button" class="btn btn-primary w-100">Iniciar Sesión</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
